@@ -6,3 +6,7 @@
 GET     /api                           controllers.HomeController.index
 + nocsrf
 POST    /api/title                     controllers.HomeController.fetchTitle
+
+GET     /app                            controllers.AppController.index
+GET     /app/                            controllers.AppController.index
+GET     /app/*file                  controllers.AppController.at(file)
