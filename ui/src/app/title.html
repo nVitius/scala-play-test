@@ -1,0 +1,16 @@
+<div class="app-foreground-title">
+  <h2>{{ vm.siteTitle }}</h2>
+</div>
+<div class="app-foreground-search">
+  <form name="vm.form">
+    <div class="form-group" data-ng-class="{ 'has-error' : vm.form.site.$invalid }">
+      <div class="input-group input-group-lg">
+        <input placeholder="http://" name="site" class="form-control" data-ng-model="vm.site" />
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="submit" data-ng-click="vm.fetchTitle(vm.site)">Fetch Title</button>
+      </span>
+      </div>
+      <div class="help-block" data-ng-show="vm.form.site.$invalid">Invalid URL Entered</div>
+    </div>
+  </form>
+</div>
